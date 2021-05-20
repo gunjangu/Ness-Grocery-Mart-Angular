@@ -177,14 +177,17 @@
               </div>
             </ul>
           </li>
-          <li><a href="#">Makeup</a></li>	
-          <li><a href="#">Hair care</a></li>
+          <li *ngFor="let category of categoryList" role="presentation" >
+            <a (click)="getProductsByCateogy(category)" routerLink="/category" href="javascript:void(0)" id="home-tab" role="tab" data-toggle="tab" aria-controls="home">{{category.name}}</a>
+          </li>
+         
           <li><a href="/aboutus">About Us</a></li>
           <li><a href="/contact">Contact</a></li>
         <li *ngIf="isLogin"  (click)="logout()"><a href="javascript:void(0)">Logout</a></li>
         </ul>
       </div>
 
+    
 <div  [ngClass]="[mainDialogType == 'checkout' ? 'checkout_dialog' : '']" id="w3lssbmincart">
   <form method="post" class="" target="">   
   <button type="button" (click)="closeDialog()" class="sbmincart-closer">×</button>  
@@ -215,3 +218,5 @@
         </div>  
       <input type="hidden" name="bn" value="sbmincart_AddToCart_WPS_US">   
     </form></div>
+
+    

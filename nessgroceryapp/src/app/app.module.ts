@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule ,HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { IndexComponent } from './index/index.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactComponent } from './contact/contact.component';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     CheckoutComponent,
     IndexComponent,
     AboutusComponent,
-    ContactComponent
+    ContactComponent,
+    CategoryComponent
  
   ],
   imports: [

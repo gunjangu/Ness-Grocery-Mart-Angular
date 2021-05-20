@@ -21,7 +21,8 @@ export class HeaderComponent implements OnInit {
   cartTotalPrice = 0;
   register = {"name":"","email":"","mobile":"","password":"","re_password":""}
   welcomeUsername = "";
-
+  categoryList :any;
+  productsList:any;
   constructor(private router:Router,private cartService:CartServiceService, private http:HttpServiceService){
     let request = {}
 
@@ -48,7 +49,17 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.http.postRequestWithToken("api/product/getAllCategory",{}).subscribe(data=>{
+      this.categoryList = data;
+      if(this.categoryList.length > 1)
+        this.getProductsByCateogy(data[0])
+    },error=>{
+      alert("Server connection error "+error)
+    })
   }
+
+
+  
   loginUserCheck(){
     if(this.mobile == ""){
       alert("Name should not be empty");
@@ -136,4 +147,34 @@ export class HeaderComponent implements OnInit {
     }
     
   }
+
+  addCart(cartProductObj){
+    var cartObj = {
+      "productId":cartProductObj.id,
+      "qty":"1",
+      "price":cartProductObj.price
+    }
+    this.cartService.addCart(cartObj);
+  }
+  getProductsByCateogy(obj){
+    let request ={
+      "cat_id":obj.id
+    }
+   this.http.postRequestWithToken('api/product/getProductsByCategory',request).subscribe(data=>{
+      this.productsList = data
+      if(this.productsList.length == 0){
+        alert("No Product is found..");
+      }
+   },error=>{
+     alert("Error in login "+error);
+   })
+  }
+
+  
+  
+
+
+
 }
+
+

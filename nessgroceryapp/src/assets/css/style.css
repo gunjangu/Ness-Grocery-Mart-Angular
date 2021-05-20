@@ -3266,9 +3266,11 @@ td.invert-image a img {
 	}
 	.w3l_logo h1 a {
 		font-size: .9em;
+		
 	}
 	.w3l_logo h1 a span {
 		letter-spacing: 6px;
+		
 	}
 	.search {
 		margin: .6em 0 0 4em;
@@ -4492,6 +4494,7 @@ td.invert-image a img {
 	}
 	.w3l_logo h1 a {
 		font-size: .7em;
+		margin-left: -105;
 	}
 	.w3l_logo h1 a span {
 		letter-spacing: 3px;
