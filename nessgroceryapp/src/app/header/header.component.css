@@ -1,0 +1,30 @@
+
+.modal.fade.login_dialog, #w3lssbmincart.checkout_dialog{
+    display: block;
+}
+#horizontalTab.login .tab-1.resp-tab-content{
+display: block;
+}
+#horizontalTab.register .tab-2.resp-tab-content{
+    display: block;
+}
+.w3l_login .username{
+    color: red;
+}
+
+
+.logo{
+    display: inline-block;
+    width: 122px;
+    height: 105px;
+    padding-left: 9px;
+    margin-top: -36px;
+}
+.container{
+    display: inline-block;
+    margin-left: 93px;
+}
+
+.agile_ecommerce_tab_left{
+    margin-bottom: 5%;
+}

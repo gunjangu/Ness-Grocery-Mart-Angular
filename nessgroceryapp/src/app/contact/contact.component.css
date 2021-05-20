@@ -1,0 +1,66 @@
+section{
+    
+    background-color: #fff;
+}
+.row{
+    width: 112%;
+    height: 70%;
+}
+
+h1{
+    font-size: 3em;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 0.2em;
+    text-align: center;
+
+    font-weight: 900;
+    text-transform: capitalize;
+    font-family: 'Oswald', sans-serif;
+    
+}
+h4{
+    color: #2fdab8;
+    font-size: 1.3em;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#Contactdivtop{
+    width: 60%;
+    height: 70%;
+    padding-bottom: 40px;
+   
+   margin-left: 20%;
+    display: inline-block;
+
+}
+.col-lg-4{
+    border: 2px solid white;
+
+        background: #171616;
+        text-align: center;
+        width: 40%;
+
+        color: white;
+    
+}
+
+ #contact_form:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+.contact-grid-agile-w3 p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 2em;
+}
+i {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 20px;
+}
