@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import {HttpServiceService} from '../http-service.service';
 import {CartServiceService} from '../service/cart-service.service';
 import { timingSafeEqual } from 'crypto';
 import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,7 +24,8 @@ export class HeaderComponent implements OnInit {
   welcomeUsername = "";
   categoryList :any;
   productsList:any;
-  constructor(private router:Router,private cartService:CartServiceService, private http:HttpServiceService){
+  constructor(private router:Router,private cartService:CartServiceService,
+     private http:HttpServiceService, @Inject(DOCUMENT) private _document: Document){
     let request = {}
 
     this.http.postRequest("api/status",request).subscribe(data=>{
@@ -55,8 +57,9 @@ export class HeaderComponent implements OnInit {
         this.getProductsByCateogy(data[0])
     },error=>{
       alert("Server connection error "+error)
-    })
+     })
   }
+  
 
 
   
@@ -139,6 +142,8 @@ export class HeaderComponent implements OnInit {
   closeDialog(){
      this.mainDialogType = "";
   }
+
+ 
   curentDropDown(currentDropdownMenuName){
     if(this.currentDropDownMenu == currentDropdownMenuName){
       this.currentDropDownMenu = "";
@@ -169,10 +174,18 @@ export class HeaderComponent implements OnInit {
      alert("Error in login "+error);
    })
   }
-
-  
   
 
+  onSelect(category){
+    this.router.navigate(['/category',category]);
+   
+  }
+  
+ onSelect1(){
+  this.router.navigateByUrl('/category').then(() => {
+    window.location.reload();
+});
+ }
 
 
 }

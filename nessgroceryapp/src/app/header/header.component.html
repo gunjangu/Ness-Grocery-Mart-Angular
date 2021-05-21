@@ -1,5 +1,5 @@
 <!-- header modal -->
-<div class="modal fade" [ngClass]="[mainDialogType == 'login' ? 'login_dialog in' : '']" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
+<div class="modal fade sticky-top" [ngClass]="[mainDialogType == 'login' ? 'login_dialog in' : '']" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
   aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -83,9 +83,9 @@
 
 <!-- header modal -->
 <!-- header -->
-<div class="header" id="home1">
+<div class="header"   id="home1">
   <span id="logospan">
-    <img  src="assets/images/nesslogo1.png" alt=" " class="logo" />
+    <img  src="assets/images1/ness-new-logo.png" alt=" " class="logo" />
   </span>
   
   <div class="container">
@@ -95,8 +95,8 @@
     <div  *ngIf="isLogin" class="w3l_login">
        <p class="username">Welcome, <span class="username">{{welcomeUsername}}</span> </p>
     </div>
-    <div class="w3l_logo">
-      <h1><a href="index.html">Ness Grocery Mart<span>Your stores. Your place.</span></a></h1>
+    <div class="w3l_logo" >
+      <h1 class="hed"><a>Ness Grocery Mart<span>Your stores. Your place.</span></a></h1>
     </div>
     <div class="search">
       <input class="search_box" type="checkbox" id="search_box">
@@ -125,9 +125,9 @@
 
 <!-- //header -->
 <!-- navigation -->
-<div class="navigation">
-  <div class="navbar">
-    <nav class="navbar navbar-default">
+<div class="navigation" (click)="closeDialog()">
+  <div class="navbar ">
+    <nav class="navbar navbar-default fixed-top">
       <!-- Brand and toggle get grouped for better mobile display -->
  
       <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
@@ -178,7 +178,8 @@
             </ul>
           </li>
           <li *ngFor="let category of categoryList" role="presentation" >
-            <a (click)="getProductsByCateogy(category)" routerLink="/category" href="javascript:void(0)" id="home-tab" role="tab" data-toggle="tab" aria-controls="home">{{category.name}}</a>
+            <a (click)="onSelect(category);onSelect1()"   href="javascript:void(0)"
+             id="home-tab" role="tab" data-toggle="tab" aria-controls="home">{{category.name}}</a>
           </li>
          
           <li><a href="/aboutus">About Us</a></li>

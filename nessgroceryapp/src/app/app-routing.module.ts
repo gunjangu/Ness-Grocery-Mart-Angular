@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: '', component: IndexComponent},
   {path: 'checkout', component: CheckoutComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'category',component:CategoryComponent}
+  {path:'category',component:CategoryComponent},
+  {path:'category/{{category.id}}',component:CategoryComponent}
 
  
 ];

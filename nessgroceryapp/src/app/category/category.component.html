@@ -7,9 +7,9 @@
             <a (click)="getProductsByCateogy(category)" href="javascript:void(0)" id="home-tab" role="tab" data-toggle="tab" aria-controls="home">{{category.name}}</a>
           </li> -->
         </ul>
-
-        <div id="myTabContent" class="tab-content">
-          <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+    
+          <div id="myTabContent"  class="tab-content">
+          <div role="tabpanel"  class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
             <div   class="agile_ecommerce_tabs">
               <div  *ngFor="let data of productsList" class="col-md-4 agile_ecommerce_tab_left">
                 <div class="hs-wrapper">
@@ -44,6 +44,7 @@
               <div class="clearfix"> </div>
          
         </div>
+        
         </div>
     </div>
     

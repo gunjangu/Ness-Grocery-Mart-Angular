@@ -211,13 +211,14 @@ a.simpleCart_empty {
 #w3lssbmincart form {
     position: relative;
     padding: 1em;
-    background: #fbfbfb;
+	font-weight: bold;
+    background: #282cb2f0;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-o-border-radius: 4px;
 	-ms-border-radius: 4px;
     border-radius: 4px;
-    color: #333;
+    color: whitesmoke;
 	-webkit-box-shadow: 0px 0px 5px 2px #9a9a9a;
 	-moz-box-shadow: 0px 0px 5px 2px #9a9a9a;
 	-o-box-shadow: 0px 0px 5px 2px #9a9a9a;
@@ -4133,6 +4134,7 @@ td.invert-image a img {
 		left: 21%;
 		width: 338px;
 		top: 24.5%;
+		
 	}
 	#w3lssbmincart .sbmincart-closer { 
 		margin: -15px -8px 0;
@@ -4142,15 +4144,20 @@ td.invert-image a img {
 	#w3lssbmincart ul { 
 		padding: 0.5em;  
 		margin: 5px 0 15px;
+	
 	}
 	#w3lssbmincart form { 
 		padding: 1em 1em .7em;
+		
+		
 	}
 	#w3lssbmincart form ul { 
 		max-height: 250px;
+		
 	}
 	#w3lssbmincart .sbmincart-item { 
 		font-size: 0.9em;
+		background-color: #ffce14 ;
 	}
 	#w3lssbmincart .sbmincart-remove { 
 		height: 18px; 
@@ -4588,10 +4595,13 @@ td.invert-image a img {
 	}
 	.w3l_login a { 
 		margin-top: 0em;
+		
 	}
 	.w3l_logo h1 a {
 		font-size: .65em;
+
 	}
+	
 	.modal-dialog {
 		width: 365px;
 	}
